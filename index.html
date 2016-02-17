@@ -1,57 +1,64 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<!--适配手机-->
-<meta name="viewport" content="width=device-width, initial-scale=1" >
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>DIV+CSS框架</title>
+<title>傲娇攻略组</title>
 <style type="text/css">
 #Container {
-	width: 700px;
 	background-color: #FFEEF9;
+	overflow: hidden;/*溢出？*/
 }
 #Header {
-	height: 80px;
-	font-size: 36px;
-	background-color: #B2DEFF;
+	border-radius: 0.5em;
+	font-size: 2.5em;/*圆角方框*/
 	text-align: center;
+	background-color: #B2DEFF;
+	margin: 2%;/*内边框*/
+	padding: 2%;/*外边框*/
 }
 #logo {/*这里设置了padding属性介绍一下padding的用法,padding将设置文本与边框的距离。*/
-	padding-left: 50px;
-	padding-top: 20px;
-	padding-bottom: 50px;
+	padding-left: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
 #Content {
-	height: auto;
-	/*此处对容器设置了高度，一般不建议对容器设置高度，一般使用overflow:auto;属性设置容器根据内容自适应高度，如果不指定高度或不设置自适应高度，容器将默认为1个字符高度，容器下方的布局元素（footer）设置margin-top:属性将无效*/
-	margin-top: 10px;
+	overflow: auto
 }
 #Content-Left {
-	height: 400px;
-	width: 160px;
-	margin: 10px;/*设置元素跟其他元素的距离为10像素*/
-	float: left;
+	border-radius: 0.5em;
+	width: 22%;
+	height: 30em;
+	margin: 2%;
 	background-color: #FFFFFF;
+	float: left;
+	padding: 2%;
 }
 #Content-Main {
-	height: 400px;
-	width: 500px;
-	margin: 10px;/*设置元素跟其他元素的距离为10像素*/
-	float: left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
-	background: #FFFFFF;
+	border-radius: 0.5em;
+	width: 62%;
+	height: 30em;
+	margin: 2%;
+	background-color: #FFFFFF;
+	float: left;
+	padding: 2%;
 }
 /*注：Content-Left和Content-Main元素是Content元素的子元素，两个元素使用了float:left;设置成两列，这个两个元素的宽度和这个两个元素设置的padding、margin的和一定不能大于父层Content元素的宽度，否则设置列将失败*/
 #guestbook {
-	height: 60px;
+	border-radius: 0.5em;
+	height: 2em;
 	background-color: #E5F8FF;
-	margin: 10px;/*设置元素跟其他元素的距离为10像素*/
+	margin: 2%;
+	padding: 2%;
 }
 #Footer {
-	height: 40px;
+	border-radius: 0.5em;
+	height: 2em;
 	background-color: #D8F9E9;
-	margin: 10px;/*设置元素跟其他元素的距离为10像素*/
-	bottom:10px;
+	margin: 2%;
+	padding: 2%;
 }
+
 .Clear {
 	clear: both;
 }
@@ -59,8 +66,8 @@
 </head>
 
 <body>
-<div id="Container">
-  <div id="Header">
+<div id="Container" >
+  <div id="Header" >
     <div id="logo">傲娇攻略组</div>
   </div>
   <div id="Content">
@@ -69,7 +76,7 @@
   </div>
   <div class="Clear"><!--如何你上面用到float,下面布局开始前最好清除一下。--></div>
   <div id="guestbook">guestbook</div>
-  <div id="Footer">Footer</div>
+  <div id="Footer">footer</div>
 </div>
 </body>
 </html>
